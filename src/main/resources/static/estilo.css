@@ -1,0 +1,297 @@
+/* ===========================================================================
+    GERAL - TODAS AS PAGINAS
+=========================================================================== */
+:root {
+  --primary-color: #1e2a38;
+  /* Azul petróleo para títulos */
+  --secondary-color: #ffffff;
+  /* Fundo branco				  */
+  --accent-color: #1e3a8a;
+  /* Azul botão 				  */
+  --accent-hover: #162b6f;
+  /* Azul hover 				  */
+  --text-color: #2c3e50;
+  /* Texto principal 			  */
+  --muted-text: #6c757d;
+  /* Texto secundário 		  */
+  --border-color: #e0e0e0;
+  /* Bordas 					  */
+  --background-light: #f7f9fb;
+  /* Fundo geral                */
+}
+
+body {
+  font-family: 'Segoe UI', 'Trebuchet MS', Tahoma, Verdana, sans-serif;
+  background: var(--background-light);
+  color: var(--text-color);
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex-grow: 1;
+}
+
+.footer {
+  background: var(--secondary-color) !important;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.footer .social-icons a {
+  color: var(--primary-color);
+  font-size: 1.3rem;
+  transition: color 0.3s ease;
+}
+
+.footer .social-icons a:hover {
+  color: #FF0000;
+}
+
+/* ===========================================================================
+    PAGINA INICIO
+=========================================================================== */
+/* Cabeçalho da página de login */
+.header {
+  background: var(--secondary-color) !important;
+  border-bottom: 1px solid var(--border-color);
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.header nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header .logo img {
+  height: 180px;
+  filter: brightness(0.9) saturate(120%);
+}
+
+/* Cartões de informação fiscal */
+.tax-card {
+  background: var(--secondary-color);
+  border-radius: 1rem;
+  border: 1px solid var(--border-color);
+}
+
+.tax-card h4 {
+  color: var(--primary-color);
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.tax-card p {
+  color: var(--muted-text);
+  font-size: 0.95rem;
+  text-align: justify;
+}
+
+/* Formulário de login */
+.login-form {
+  background: var(--secondary-color);
+  padding: 2.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+}
+
+.login-form input {
+  border-radius: 0.75rem;
+  border: 1px solid var(--border-color);
+  padding: 0.9rem 1rem;
+  font-size: 1rem;
+}
+
+.login-form input:focus {
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 0.25rem rgba(30, 58, 138, 0.15);
+}
+
+/* Botão de login */
+.btn-entrar {
+  background: var(--accent-color);
+  border: none;
+  color: #fff;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: background 0.3s ease;
+}
+
+.btn-entrar:hover {
+  background: var(--accent-hover);
+}
+
+/* ===========================================================================
+    GERAL - PAGINA DE 01 A 11
+=========================================================================== */
+/* Cabeçalho comum para o menu principal e páginas de cadastro/relatório */
+.header-pagina01 {
+  background: var(--secondary-color) !important;
+  border-bottom: 1px solid var(--border-color);
+  padding: 0.5rem 0;
+  position: relative;
+}
+
+.header-pagina01 .container-fluid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.header-pagina01 .logo img {
+  height: 80px;
+  filter: brightness(0.9) saturate(120%);
+}
+
+.header-pagina01 .nav-buttons {
+  display: flex;
+  gap: 1rem;
+  position: absolute;
+  right: 1rem;
+}
+
+.header-pagina01 .nav-buttons .btn {
+  background: var(--accent-color);
+  border: none;
+  color: #fff;
+  border-radius: 0.5rem;
+  padding: 0.6rem 1.2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.header-pagina01 .nav-buttons .btn:hover {
+  background: var(--accent-hover);
+}
+
+/* Estilo geral formulários (Página 02 a 10) */
+.fcp-form-container {
+  background: var(--secondary-color);
+  border-radius: 1rem;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+  max-width: 500px;
+}
+
+/* Estilo geral botões formulario (Página 02 a 10) */
+.btn-salvar,
+.btn-excluir {
+  background: var(--accent-color);
+  color: #fff;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.6rem 1.5rem;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.btn-salvar:hover,
+.btn-excluir:hover {
+  background: var(--accent-hover);
+}
+
+/* Estilo geral tabelas (Páginas 02 a 09 e 11) */
+.fcp-table {
+  border: 1px solid var(--border-color);
+  border-collapse: separate;
+  border-spacing: 0;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1600px;
+}
+
+.fcp-table thead th,
+.fcp-table tbody td {
+  border: 1px solid var(--border-color);
+  padding: 0.75rem;
+  text-align: center;
+}
+
+/* ===========================================================================
+    PAGINA 01
+=========================================================================== */
+.pagina01 {
+  padding: 2rem;
+}
+
+/* Estilo da grade de cards */
+.pagina01 .cards-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+  justify-content: center;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Estilo dos cards */
+.pagina01 .card {
+  background: var(--secondary-color);
+  border: 1px solid var(--border-color);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  text-align: center;
+  transition: none;
+  cursor: default;
+}
+
+/* Remover efeito de hover dos cards */
+.pagina01 .card:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+/* Estilo para o texto do subtítulo dos cards */
+.pagina01 .card small {
+  display: block;
+  color: var(--muted-text);
+  font-size: 0.85rem;
+  margin-bottom: 0.5rem;
+  text-align: left;
+}
+
+/* Estilo para o título dos cards */
+.pagina01 .card h3 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+/* Estilo para o texto principal da página */
+.pagina01 p.lead {
+  font-size: 1.5rem;
+  font-weight: normal;
+}
+
+/* ===========================================================================
+    PAGINA 10
+=========================================================================== */
+/* Redimensiona o formulário de cadastro de produto para ser mais largo */
+.pagina10 .fcp-form-container {
+  max-width: 800px;
+}
+
+/* Ajustes de layout para o formulário */
+.pagina10 .fcp-form-container label {
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+/* Forçar campos a ficarem lado a lado */
+.pagina10 .row .col-6,
+.pagina10 .row .col-md-6 {
+  flex: 0 0 auto;
+  width: 50%;
+}
